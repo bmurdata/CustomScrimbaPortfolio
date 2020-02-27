@@ -38,6 +38,9 @@ than adding to the total width of something. */
     }
 }
 /*General Styles*/
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--clr-light);
     color:var(--clr-dark);
@@ -127,6 +130,7 @@ header {
 .logo{
     max-width: 150px;
 }
+/*The extended navigation*/
 .nav {
     position: fixed;
     background:var(--clr-dark);
@@ -162,6 +166,70 @@ header {
 .nav__link:hover {
     color:var(--clr-accent);
 }
+/*Button itself, add padding, make cursor so people can see hand icon on hover, set so
+button always on top*/
+.nav-toggle{
+    padding:.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right:1em;
+    top: 1em;
+    z-index: 1000;
+
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+
+}
+.nav-open .nav-toggle{
+    position: fixed;
+
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+}
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+/*Hamburger will not be a single icon*/
+/*Creates a black line*/
+.hamburger{
+    display:block;
+    position: relative;
+}
+/*Hamburger, all share color*/
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    background:var(--clr-accent);
+    width: 2em;
+    height:3px;
+    border-radius: 1em;
+    /*Used to make the Hamburger move a bit*/
+    transition: transform 250ms ease-in-out;
+
+}
+/*absolute ,matches width of the hamburger, new pseduo element, do not need display:block
+as have position absolute, need position as hamburger postition is relative, without
+will be relative to whole screen*/
+.hamburger::before,
+.hamburger::after{
+    content:'';
+    position: absolute;
+    left:0;
+    right:0;
+}
+/*6px as has height of 3, will have top height of 3, empty space, then rest of burger*/
+.hamburger::before{ top:  6px;}
+
+.hamburger::after { bottom: 6px;}
 /*Intro Section*/
 .intro{
     position: relative;
@@ -367,4 +435,16 @@ header {
 
 .social-list__link {
     padding: .5em;
+}
+
+/*For the template site*/
+.portfolio-item-individual{
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+.portfolio-item-individual p{
+    max-width: 800px;
+
 }
