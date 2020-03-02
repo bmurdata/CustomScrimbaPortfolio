@@ -281,7 +281,15 @@ will be relative to whole screen*/
     text-align:center;
 
 }
+.my-services p {
+    background-color: var(--clr-dark);
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    /*background-blend-mode: multiply;/*darkens the image a bit.*/
+    color:var(--clr-light);
+    text-align:left;
 
+}
 .section__title--services {
     color:var(--clr-accent);
     position: relative;
