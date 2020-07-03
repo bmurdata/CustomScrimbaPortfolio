@@ -34,38 +34,38 @@
         <!--Introduction double hyphen modified class,double underscore for css, -->
         <section class="intro" id="home">
             <h1 class="section__title section__title--intro">
-                Title of <strong> Project Name</strong>
+                <strong> NYPD Coronavirus </strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Project Subtitle</p>
+            <p class="section__subtitle section__subtitle--intro">Analyzing the NYPDNews Twitter</p>
             <img class="intro__img" src="img/portfolio-01.jpg" alt="img">
         </section>
         <div class="portfolio-item-individual">
-            <p>Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?</p>
+            <p>As part of NYC response to COVID-19, the NYPD began posting regularly on members out sick, with a high of nearly 20%. 
+                They also posted on locations visited, including number opened and closed. However, there was no clear dataset or visuals, which I attempted to solve, using Python and SQL Server.</p>
+                <p>Code can be viewed here <a href="https://github.com/bmurdata/NYPD-Corona">here.</a></p>
+                <p>The project was split into two parts: data gathering and report generation.</p>
+
             <img src="img/portfolio-details.jpg" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe et amet tenetur! Fugit sequi optio corrupti fugiat ducimus consequatur incidunt?</p>
-            <p>Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?</p>
-        </div>
+
+            <p> </p>
+            <h2>Data Gathering</h2>
+            <p>To get the data, I used the Python Package twint to scrape Twitter, and put it into a JSON file. This file was examined and a structure found. I then used pyodbc to put the data into a SQL Server database for extration and to perform basic queries. 
+                Invesitagion showed it lacked a true datetime field, so I combined two fields to add it.</p>
+            <h2>Report Generation</h2>
+            <p>As of now, the project is still ongoing, however initial analysis shows that on most days, over half of bars and resturants were closed, as well as supermarkets. With rare exception, all personal care facilites were closed. There was also missing data, as well as inconsistent times from the start of reporting until it became more regular.</p>
+            </div>
+
         <!--Template area -->
-        
-        
         <footer class="footer">
-            <a href="mailto:hello@test.com"class="footer__link">hello@test.com</a>
+            <p>My Social Media</p>
             <ul class="social-list">
                 <li class="social-list__item"><a class="social-list__link" 
-                    href="https://github.com/bmurdata">
+                    href="https://github.com/bmurdata"></a>
                     <i class="fab fa-github"></i>
                 </a></li>
                 <li class="social-list__item"><a class="social-list__link" 
                     href="https://www.linkedin.com/in/brian-murphy-b14763121">
                     <i class="fab fa-linkedin"></i>
-                </a></li>
-                <li class="social-list__item"><a class="social-list__link" 
-                    href="link1">
-                    Three
-                </a></li>
-                <li class="social-list__item"><a class="social-list__link" 
-                    href="link1">
-                    Four
                 </a></li>
             </ul>
         </footer>
