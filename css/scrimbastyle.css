@@ -283,13 +283,15 @@ will be relative to whole screen*/
 }
 .my-services p {
     background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    /*background-image: url(../img/services-bg.jpg);*/
+    background-color: rgba(0, 0, 0, 0);
     background-size: cover;
     /*background-blend-mode: multiply;/*darkens the image a bit.*/
     color:var(--clr-light);
     text-align:left;
 
 }
+
 .section__title--services {
     color:var(--clr-accent);
     position: relative;
@@ -310,6 +312,7 @@ will be relative to whole screen*/
 .service {
     max-width: 500px;
     margin: 0 auto;
+    
 }
 
 @media (min-width: 800px) {
